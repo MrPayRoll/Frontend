@@ -34,33 +34,32 @@ function Home() {
           </div>
         </div>
       </div>
-      <div class="info-section">
-           <div class="payment-info">
-                <div class="dot"></div>
+      <div className="info-section">
+           <div className="payment-info">
+                <div className="dot"></div>
                    <p>Оплата при получении<br/>Для заказов до 55 тысяч рублей не требуется предоплата, можно оплатить при получении наличными или банковской картой</p>
                     </div>
-                    <div class="payment-info">
-                   <div class="dot"></div>
+                    <div className="payment-info">
+                   <div className="dot"></div>
                     <p>Доставка по всей России<br/>Наши склады открыты во всех регионах страны, по вашему выбору доставим заказ курьером, через транспортную компанию или Почтой России</p>
                 </div>
             </div>
-            <div class="brands-section">
+            <div className="brands-section">
          <h2>Популярные бренды</h2>
-        <div class="brands-container">
-            <div class="brand-item"><img src={bosh} alt="Stellox"/></div>
-            <div class="brand-item"><img src={bosh} alt="Areol"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
-            <div class="brand-item"><img src={bosh} alt="Wezer"/></div>
+        <div className="brands-container">
+            <div className="brand-item"><img src={bosh} alt="Stellox"/></div>
+            <div className="brand-item"><img src={bosh} alt="Areol"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
+            <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
             </div>
           </div>
      </div>
   );
 }
-
 export default Home;
