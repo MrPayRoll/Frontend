@@ -4,7 +4,7 @@
 }
 
 .glivn {
-    background: rgb(209, 69, 69);
+
     
     padding: 20px;
 }
@@ -32,7 +32,7 @@ nav ul {
 .sidebar {
     width: 200px;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-top: 70px;
 }
 
 .filter-section {
@@ -60,27 +60,42 @@ nav ul {
     flex: 1;
     padding: 20px;
     margin-right: 15%;
+    margin-top: 50px; 
 }
+
 
 .product-card {
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
+.product-card h2 {
+    margin: 0px; 
+    text-align: start;
+}
+.product-card .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .product-card .price {
     color: #00aced;
     font-size: 18px;
-    margin: 10px 0;
+    margin: 0;
 }
-
 .product-card .buy-button {
     background-color: #ccc;
     border: none;

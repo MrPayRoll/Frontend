@@ -1,7 +1,9 @@
 import './Contact.css';
-
+import Header from '../Components/Header'
 const ContactPage = () => {
   return (
+    <>
+    <Header></Header>
     <div className="contact-page">
                 <h2>Контакты</h2>
       <div className="contact-details">
@@ -34,6 +36,7 @@ const ContactPage = () => {
         <button>Отправить</button>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import '../Components/Basket.css';
 import images from '../assets/images.jpg';
+import Header from './Header';
 const Basket = () => {
   const items = [
     { id: 1, name: 'Двигатель какой то там', price: 9999, quantity: 1 },
@@ -8,8 +10,10 @@ const Basket = () => {
   ];
 
   const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
-
+  const [modalActive, setModalActive] = useState(true)
   return (
+    <>
+    <Header></Header>
     <div className="cart-container">
       <div className="items">
         {items.map((item) => (
@@ -47,6 +51,7 @@ const Basket = () => {
         <button>Перейти к оформлению</button>
       </div>
     </div>
+    </>
   );
 };
 

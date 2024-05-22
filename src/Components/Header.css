@@ -1,36 +1,51 @@
-body {
+* {
     margin: 0;
     font-family: Arial, sans-serif;
     min-height: 0;
 }
+
 .header {
     display: grid;
     grid-template-columns: auto 0.5fr 1.5fr auto;
     align-items: center;
     grid-gap: 20px;
     padding: 10px 20px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
     width: 90vw;
     margin-left: 5%;
     align-self: start;
 }
 
 .logo {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     color: #0056b3;
 }
-
-.logo small {
+.logo-text-small {
     color: #ff7f27;
 }
 
+.open-btn{
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+}
 .catalog-button {
     background-color: #0056b3;
     color: white;
-    border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
 }
 
 .search-bar {
@@ -54,10 +69,17 @@ body {
     cursor: pointer;
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.button-group > * {
+    margin-right: 10px;
+}
+
+.button-group > *:last-child {
+    margin-right: 0;
 }
 
 .icon-links {
@@ -78,6 +100,22 @@ button {
     font-size: 20px;
 }
 
+.auth-links {
+    display: flex;
+    align-items: center;
+}
+
+.auth-links > * {
+    margin-right: 5px;
+}
+
+.auth-links > *:last-child {
+    margin-right: 0;
+}
+.item-link{
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .header {
         grid-template-columns: 1fr;
@@ -93,56 +131,16 @@ button {
         flex-direction: column;
         gap: 10px;
     }
-}
-.popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.popup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    width: 20vw;
-}
+    .auth-links {
+        margin-top: 10px;
+    }
 
-.popup input {
-    display: block;
-    margin-bottom: 10px;
-    width: 90%;
-    padding: 8px;
-}
+    .auth-links > span {
+        display: none;
+    }
 
-.popup button {
-    padding: 8px 20px;
-    background-color: #FB9257;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    .auth-links > a {
+        display: inline;
+    }
 }
-
-.close-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-}
-
-.close-button i {
-    color: #777;
-}
-
-.close-button i:hover {
-    color: #333;
-}
-

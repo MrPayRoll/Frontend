@@ -38,7 +38,7 @@ const ProfilePage = () => {
                         Телефон
                         <input type="tel" name="phone" />
                     </label>
-                    <button type="submit">Сохранить изменения</button>
+                    <button className='button-lk' type="submit">Сохранить изменения</button>
                 </form>
                 <div className="photo-placeholder">
                     <div className="circle large"></div>

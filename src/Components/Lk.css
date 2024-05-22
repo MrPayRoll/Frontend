@@ -1,4 +1,4 @@
-.profile-page {
+/* .profile-page {
     display: grid;
     grid-template-columns: 200px 1fr;
     height: 100vh;
@@ -49,18 +49,14 @@ input {
     width: 20vw;
 }
 
-button {
+.button-lk {
     background-color: orange;
     border: none;
-    color: white;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: darkorange;
-}
 
 .photo-placeholder {
     position: absolute;
@@ -105,4 +101,4 @@ button:hover {
     .photo-placeholder {
         display: none;
     }
-}
+} */

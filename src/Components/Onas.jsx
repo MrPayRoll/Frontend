@@ -1,8 +1,10 @@
 import React from 'react';
 import '../Components/Onas.css';
-
+import Header from '../Components/Header';
 const Onas = () => {
     return (
+        <>
+        <Header></Header>
         <div className="container-onas">
             <h1>О Нас</h1>
             <p>
@@ -34,6 +36,7 @@ const Onas = () => {
                 <li>Контроль качества продукции</li>
             </ul>
         </div>
+        </>
     );
 };
 

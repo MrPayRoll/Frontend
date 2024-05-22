@@ -1,17 +1,19 @@
-import React from 'react';
 import images from '../assets/images.jpg';
 import bosh from '../assets/bosh.webp';
 import '../Components/Home.css';
+import Header from './Header';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <div className='glavni'>
+      <Header></Header>
       <div className="container">
         <div className="category-section">
-          <div className="category-item">
-            <img src={images} alt="Двигатель" className="category-img" />
-            <p>Все каталоги</p>
-          </div>
+        <Link to="/catalog" className="item-link">
+          <img src={images} alt="Двигатель" className="category-img" />
+          <p>Все каталоги</p>
+        </Link>
           <div className="category-item">
             <img src={images} alt="Шина" className="category-img" />
             <p>Шины и диски</p>
@@ -59,6 +61,7 @@ function Home() {
             <div className="brand-item"><img src={bosh} alt="Wezer"/></div>
             </div>
           </div>
+
      </div>
   );
 }

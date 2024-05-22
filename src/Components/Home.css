@@ -1,11 +1,10 @@
 .glavni {
-    background-color: blanchedalmond;
+    background-color: FFFFFF;
     height: 100%;
 }
 .container {
     width: 70vw;
     margin-left: 15%;
-    background: rgb(206, 71, 206);
     overflow: hidden;
 }
 .category-section {
@@ -13,16 +12,20 @@
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 1em;
     justify-content: space-around;
+    margin-top: 3%;
 }
 
 .category-item {
     padding: 1em;
-    background: rgb(182, 93, 93);
+    
 }
 .category-img {
-    width: 100%;
+    width: 50%;
+    height: auto;
     height: auto;
     object-fit: cover;
+    margin-left: 25%;
+
 }
 .info-section {
     display: grid;
@@ -68,6 +71,6 @@
     object-fit: cover;
     margin-left: 30%;
 }
-p{
+.glavni  p{
     text-align: center;
 }
