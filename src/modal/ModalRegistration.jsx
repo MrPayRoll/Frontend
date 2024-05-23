@@ -1,9 +1,8 @@
-/* Регистрация */
 import React, { useState } from "react";
 import axios from "axios";
 import './Registration.css';
 
-const Modal = ({active, setActive}) => {
+const Modal = ({ active, setActive }) => {
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -30,10 +29,28 @@ const Modal = ({active, setActive}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
             <div className="modal__content" onClick={e => e.stopPropagation()}>
-                <input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="Имя пользователя" />
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Электронная почта" />
-                <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Пароль" />
-                <button onClick={handleSubmit}>Зарегистрироваться</button>
+                <input
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={handleChange}
+                    placeholder="Введите имя"
+                />
+                <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                />
+                <input
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    placeholder="Пароль"
+                />
+                <button onClick={handleSubmit}>Регистрация</button>
             </div>
         </div>
     );

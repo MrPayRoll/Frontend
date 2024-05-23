@@ -1,4 +1,3 @@
-/* Вход */
 import React, { useState } from "react";
 import axios from "axios";
 import './ModalAuth.css';
@@ -18,7 +17,7 @@ const ModalAuth = ({ activeAuth, setActiveAuth, onLogin }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('https://6072-94-141-124-60.ngrok-free.app/api/user/login', formData);
+            const response = await axios.post('https://c43e-94-141-124-60.ngrok-free.app/api/user/login', formData);
             console.log(response.data); 
             onLogin();
             setActiveAuth(false);
@@ -30,8 +29,20 @@ const ModalAuth = ({ activeAuth, setActiveAuth, onLogin }) => {
     return (
         <div className={activeAuth ? "ModalAuth activeAuth" : "ModalAuth"} onClick={() => setActiveAuth(false)}>
             <div className="ModalAuth__content" onClick={e => e.stopPropagation()}>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Электронная почта" />
-                <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Пароль" />
+                <input 
+                    type="email" 
+                    name="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    placeholder="Электронная почта" 
+                />
+                <input 
+                    type="password" 
+                    name="password" 
+                    value={formData.password} 
+                    onChange={handleChange} 
+                    placeholder="Пароль" 
+                />
                 <button onClick={handleSubmit}>Войти</button>
             </div>
         </div>
@@ -39,4 +50,3 @@ const ModalAuth = ({ activeAuth, setActiveAuth, onLogin }) => {
 };
 
 export default ModalAuth;
-

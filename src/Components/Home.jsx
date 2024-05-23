@@ -14,10 +14,12 @@ function Home() {
           <img src={images} alt="Двигатель" className="category-img" />
           <p>Все каталоги</p>
         </Link>
+        <Link to="/catalog" className="item-link" >
           <div className="category-item">
             <img src={images} alt="Шина" className="category-img" />
             <p>Шины и диски</p>
           </div>
+          </Link>
           <div className="category-item">
             <img src={images} alt="Технические запчасти" className="category-img" />
             <p>Тех запчасти</p>
