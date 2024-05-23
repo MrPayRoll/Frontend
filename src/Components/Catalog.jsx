@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../Components/Catalog.css';
 import axios from 'axios';
 import Header from '../Components/Header';
+import { useLocation } from 'react-router-dom';
 
 function Catalog() {
   const [filteredData, setFilteredData] = useState(null);
@@ -17,6 +18,8 @@ function Catalog() {
     4: false, // Инструменты
     5: false, // АвтоХимия
   });
+
+  const location = useLocation();
 
   const handleMinChange = (e) => {
     const value = Math.min(Number(e.target.value), maxValue - 1);
@@ -74,12 +77,22 @@ function Catalog() {
   }, []);
 
   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const infoId = params.get('info_id');
+    if (infoId) {
+      setSelectedCategories((prevCategories) => ({
+        ...prevCategories,
+        [infoId]: true,
+      }));
+    }
+  }, [location.search]);
+
+  useEffect(() => {
     filterByPriceAndCategory();
   }, [minValue, maxValue, data, selectedCategories]);
 
   if (error) return <p>Error: {error.message}</p>;
 
-  
   return (
     <>
       <Header />
@@ -138,27 +151,25 @@ function Catalog() {
             </div>
 
             <div className="filter-section">
-  <h4>Categories</h4>
-  {Object.keys(selectedCategories).map((categoryId) => (
-    <label key={categoryId} className={`category-label category-${categoryId}`}>
-      <input
-        type="checkbox"
-        value={categoryId}
-        checked={selectedCategories[categoryId]}
-        onChange={() => handleCategoryChange(categoryId)}
-        className={`category-checkbox category-${categoryId}`}
-      />
-      {categoryId === '1' && "Шины"}
-      {categoryId === '2' && "Тех запчасти"}
-      {categoryId === '3' && "Масла"}
-      {categoryId === '4' && "Инструменты"}
-      {categoryId === '5' && "АвтоХимия"}
-      <span>(1)</span>
-    </label>
-  ))}
-</div>
-
-
+              <h4>Categories</h4>
+              {Object.keys(selectedCategories).map((categoryId) => (
+                <label key={categoryId} className={`category-label category-${categoryId}`}>
+                  <input
+                    type="checkbox"
+                    value={categoryId}
+                    checked={selectedCategories[categoryId]}
+                    onChange={() => handleCategoryChange(categoryId)}
+                    className={`category-checkbox category-${categoryId}`}
+                  />
+                  {categoryId === '1' && "Шины"}
+                  {categoryId === '2' && "Тех запчасти"}
+                  {categoryId === '3' && "Масла"}
+                  {categoryId === '4' && "Инструменты"}
+                  {categoryId === '5' && "АвтоХимия"}
+                  <span>(1)</span>
+                </label>
+              ))}
+            </div>
           </div>
           <div className="product-grid">
             {filteredData && filteredData.map((item) => (
@@ -179,4 +190,3 @@ function Catalog() {
 }
 
 export default Catalog;
-
