@@ -59,7 +59,7 @@ function Catalog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://2b95-94-141-124-60.ngrok-free.app/api/detail/all', {
+        const response = await axios.get('https://6dc4-94-141-124-60.ngrok-free.app/api/detail/all', {
           headers: {
             'ngrok-skip-browser-warning': 'true',
           },

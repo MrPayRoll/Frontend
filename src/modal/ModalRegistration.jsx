@@ -18,7 +18,7 @@ const Modal = ({ active, setActive }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('https://2b95-94-141-124-60.ngrok-free.app/api/user/registration', formData);
+            const response = await axios.post('https://6dc4-94-141-124-60.ngrok-free.app/api/user/registration', formData);
             console.log(response.data);
             setActive(false);
         } catch (error) {
