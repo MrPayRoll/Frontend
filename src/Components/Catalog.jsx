@@ -64,7 +64,7 @@ function Catalog() {
             'ngrok-skip-browser-warning': 'true',
           },
         });
-        setData(response.data);
+        setData(response.data); 
         setFilteredData(response.data);
       } catch (error) {
         setError(error);

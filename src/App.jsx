@@ -11,6 +11,7 @@ import Onas from "./Components/Onas";
 import Modal from './modal/ModalRegistration';
 import YourComponent from './Components/test';
 import DetailForm from './Components/test';
+import Slider from './Components/Slider';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/modal" element={<Modal />} />
           <Route path="/test" element={<YourComponent />} />
           <Route path="/admin" element={<DetailForm />} />
+          <Route path="/Slider" element={<Slider />} />
         </Routes>
       </Router> 
   );

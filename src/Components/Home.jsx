@@ -3,7 +3,7 @@ import bosh from '../assets/bosh.webp';
 import '../Components/Home.css';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-
+import Slider from './Slider';
 function Home() {
   return (
     <div className='glavni'>
@@ -58,16 +58,26 @@ function Home() {
       </div>
       <div className="brands-section">
         <h2>Популярные бренды</h2>
+        <Slider></Slider>
         <div className="brands-container">
-          <div className="brand-item"><img src={bosh} alt="Stellox" /></div>
-          <div className="brand-item"><img src={bosh} alt="Areol" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
-          <div className="brand-item"><img src={bosh} alt="Wezer" /></div>
+        <div class="grid-container-img">
+  <div class="item1">
+    <img src={bosh} alt="Auto parts 1" />
+  </div>
+  <div class="item2">
+    <img src={bosh} alt="Auto parts 2" />
+  </div>
+  <div class="item3">
+    <img src={bosh} alt="Auto parts 3" />
+  </div>
+  <div class="item4">
+    <img src={bosh} alt="Auto parts 4" />
+  </div>
+  <div class="item5">
+    <img src={bosh} alt="Auto parts 5" />
+  </div>
+</div>
+
         </div>
       </div>
     </div>
